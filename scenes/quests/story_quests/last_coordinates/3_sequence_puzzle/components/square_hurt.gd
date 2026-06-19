@@ -17,7 +17,6 @@ func update_size() -> void:
 	%Colision.shape.size.y = Size
 
 func _on_area_2d_body_entered(_body: Node2D) -> void:
-	print("daño")
 	daño.emit()
 
 func activar_colision() -> void :
