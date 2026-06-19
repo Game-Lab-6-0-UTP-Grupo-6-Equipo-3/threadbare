@@ -436,7 +436,7 @@ color = Color(0.21230483, 0.21230483, 0.21230483, 1)
 
 [node name="Player" parent="." unique_id=1079296690 instance=ExtResource("5_phtw2")]
 z_index = 2
-position = Vector2(2304, 1487)
+position = Vector2(78, 2558)
 player_name = "Playerrrr"
 sprite_frames = ExtResource("6_ju6ja")
 
