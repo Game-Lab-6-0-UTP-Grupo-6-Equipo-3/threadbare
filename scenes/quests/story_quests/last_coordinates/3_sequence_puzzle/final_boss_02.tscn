@@ -81,7 +81,7 @@ metadata/_custom_type_script = "uid://x1mxt6bmei2o"
 [node name="CinematicFinal" type="Node2D" parent="." unique_id=1932955254]
 script = ExtResource("2_usykc")
 dialogue = ExtResource("4_3doja")
-next_scene = "uid://ccvtfhl2daoum"
+next_scene = "uid://mkp8kbykewyv"
 autostart = false
 metadata/_custom_type_script = "uid://x1mxt6bmei2o"
 
