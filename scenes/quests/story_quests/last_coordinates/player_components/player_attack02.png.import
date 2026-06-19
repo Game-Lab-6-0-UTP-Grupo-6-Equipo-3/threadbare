@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://wvj00urtstfo"
-path="res://.godot/imported/house_yellow.png-1a1ddf117e22f93466c42ec70d78ddea.ctex"
+uid="uid://cwkbk8ich2wmr"
+path="res://.godot/imported/player_attack02.png-b5423b870c79581d67f9bb6038f48b72.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/quests/story_quests/last_coordinates/assets/buildings/house_yellow.png"
-dest_files=["res://.godot/imported/house_yellow.png-1a1ddf117e22f93466c42ec70d78ddea.ctex"]
+source_file="res://scenes/quests/story_quests/last_coordinates/player_components/player_attack02.png"
+dest_files=["res://.godot/imported/player_attack02.png-b5423b870c79581d67f9bb6038f48b72.ctex"]
 
 [params]
 

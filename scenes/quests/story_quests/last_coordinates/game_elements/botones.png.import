@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dsj5xqiactsoe"
-path="res://.godot/imported/evil_walk2.png-73aa4c5da77900f224eff818eef2c829.ctex"
+uid="uid://bhb8r3nh1bxvr"
+path="res://.godot/imported/botones.png-30de949d79446e42f2bc7063c8d01827.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/quests/story_quests/last_coordinates/assets/enemies/evil_walk2.png"
-dest_files=["res://.godot/imported/evil_walk2.png-73aa4c5da77900f224eff818eef2c829.ctex"]
+source_file="res://scenes/quests/story_quests/last_coordinates/game_elements/botones.png"
+dest_files=["res://.godot/imported/botones.png-30de949d79446e42f2bc7063c8d01827.ctex"]
 
 [params]
 

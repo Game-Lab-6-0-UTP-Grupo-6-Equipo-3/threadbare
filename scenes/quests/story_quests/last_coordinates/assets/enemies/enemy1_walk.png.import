@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bgesuxh0w0gvn"
-path="res://.godot/imported/enemy2_idle.png-30f7794f4715f77ba90d3aef017b79f7.ctex"
+uid="uid://c5ufnvc7tkbaj"
+path="res://.godot/imported/enemy1_walk.png-4957391fac7b8ab8df77cff488a16c63.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/quests/story_quests/last_coordinates/assets/buildings/enemy2_idle.png"
-dest_files=["res://.godot/imported/enemy2_idle.png-30f7794f4715f77ba90d3aef017b79f7.ctex"]
+source_file="res://scenes/quests/story_quests/last_coordinates/assets/enemies/enemy1_walk.png"
+dest_files=["res://.godot/imported/enemy1_walk.png-4957391fac7b8ab8df77cff488a16c63.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c5ufnvc7tkbaj"
-path="res://.godot/imported/sprite-sheet.png-6bbe843567606812a47b2696f4c3808d.ctex"
+uid="uid://bwpktqe54khkb"
+path="res://.godot/imported/botones_press.png-25843c79e4b542f52db65f08d2198ac3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/quests/story_quests/last_coordinates/assets/enemies/sprite-sheet.png"
-dest_files=["res://.godot/imported/sprite-sheet.png-6bbe843567606812a47b2696f4c3808d.ctex"]
+source_file="res://scenes/quests/story_quests/last_coordinates/game_elements/botones_press.png"
+dest_files=["res://.godot/imported/botones_press.png-25843c79e4b542f52db65f08d2198ac3.ctex"]
 
 [params]
 
