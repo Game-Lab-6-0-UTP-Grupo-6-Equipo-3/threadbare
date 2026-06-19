@@ -11,7 +11,7 @@ extends Node2D
 
 @onready var player: Player = $Underground/Player
 @onready var lifesText: Label = $CanvasLayer/HBoxContainer/TextureRect/lifesText
-@onready var tilemap: TileMapLayer = $Tiles/TileMapLayer
+@onready var tileFloor: TileMapLayer = $Tiles/floor
 @onready var fillGameLocig: FillGameLogic = $FillGameLogic
 @onready var playerAnimation: AnimationPlayer = $Underground/Player/PlayerHarm/GotHitAnimation
 @export var squareHurt:PackedScene = preload("uid://cu7r1r0afhvgj")
@@ -21,71 +21,68 @@ extends Node2D
 @onready var textDanger: Label = $TextDanger
 @onready var enemy :ThrowingEnemy = $Underground/ThrowingEnemy
 var finalBarrel: bool = false
-#@onready var projectile: PackedScene = preload("uid://yqbgsj15hp2m")
-# Called when the node enters the scene tree for the first time.
+
 func _ready() -> void:
 	lifesText.text = "x" + str(lifes)
-	print("Inicio")
 	
 #Funcion que genera lasers aleatorios de acuerdo al tilemap puesto
 func generateLaser() -> void:
 	if finalBarrel == false:
 		var rayo: Node = squareHurt.instantiate()
-		var celdas: Array[Vector2i] = tilemap.get_used_cells()
+		var celdas: Array[Vector2i] = tileFloor.get_used_cells()
 		var celda: Variant = celdas.pick_random()
-		rayo.global_position = tilemap.to_global(tilemap.map_to_local(celda))
+		rayo.global_position = tileFloor.to_global(tileFloor.map_to_local(celda))
 		add_child(rayo)
 		rayo.daño.connect(logicLife)
 	pass
-	
 
 func generateLasers(cantidad:int) -> void:
 	for i in cantidad:
 		generateLaser()
 
+# Por cada escudo roto genera un aluvion de rayos
 func moreLaser() -> void:
 	CameraShake.shake()
 	%soundWarning.play()
 	textDanger.visible = true
 	parpadear()
 	timerDanger.start()
-
 func parpadear() -> void:
 	var tween: Tween = create_tween()
 	tween.set_loops()
-
 	tween.tween_property(textDanger, "modulate:a", 0.0, 0.5)
 	tween.tween_property(textDanger, "modulate:a", 1.0, 0.5)
 
+#Funcion de vidas simple TODO: Mejorar
 func logicLife() -> void:
 	lifes -=1
-	print(lifes)
 	playerAnimation.play(&"got_hit")
 	CameraShake.shake()
 	if lifes == 0:
 		GameState.intro_dialogue_shown = false
 		player.defeat()
-		print("Muerte")
 	lifesText.text = "x" + str(lifes)
 
+#Inicia secuancia al destruir todo los escudos
 func final() -> void:
 	finalBarrel = true
+	timer.stop()
 	GameState.intro_dialogue_shown = false
 	cinematicFinal.start()
-	timer.stop()
-	#SceneSwitcher.change_to_file_with_transition("uid://ccvtfhl2daoum")
-	print("Final")
-
+	
+#Cinematica inicial room oscuro
 func cinematic() -> void:
 	var tween: Tween = create_tween()
 	tween.tween_property(%CanvasModulate, "color", Color("d3d3d3ff"), 2.5)
-	print("Se hizo la luz")
 
+
+#Cada tanto seg genera un rayo
 func _on_timer_timeout() -> void :
 	if finalBarrel == false:
 		generateLasers(nRayos)
 	pass
 
+#Genera 10 rayos mas por cada escudo roto
 func _on_timer_danger_timeout() -> void:
 	if finalBarrel == false:
 		textDanger.visible = false

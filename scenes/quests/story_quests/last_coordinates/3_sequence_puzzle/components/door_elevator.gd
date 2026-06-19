@@ -11,23 +11,16 @@ extends Toggleable
 @onready var doorOpened_sound: AudioStreamPlayer2D = $DoorOpenedSound
 @onready var doorClosed_sound: AudioStreamPlayer2D = $DoorClosedSound
 
-
 func open() -> void:
-	if play_victory_fanfare_on_open:
-		print("Abre")
 	doorOpened_sound.play()
 	set_toggled(true)
 
-
 func close() -> void:
-	print("Cierra")
 	doorClosed_sound.play()
 	set_toggled(false)
 
-
 func set_toggled(value: bool) -> void:
 	opened = value
-
 
 func update_opened_state() -> void:
 	%DoorElevClose.visible = !opened
