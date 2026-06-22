@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://b1hewjy7f32c"
+path="res://.godot/imported/nivel1_dialogo1.dialogue-73663bbc03061d3f292c3864910a5fc9.tres"
+
+[deps]
+
+source_file="res://scenes/quests/story_quests/last_coordinates/dialogos/nivel1_dialogo1.dialogue"
+dest_files=["res://.godot/imported/nivel1_dialogo1.dialogue-73663bbc03061d3f292c3864910a5fc9.tres"]
+
+[params]
+
+defaults=true

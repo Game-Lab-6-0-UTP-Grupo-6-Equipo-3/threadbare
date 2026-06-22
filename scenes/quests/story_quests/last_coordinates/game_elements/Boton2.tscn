@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://lxmhfvt5oli3"]
 
-[ext_resource type="Texture2D" uid="uid://bhb8r3nh1bxvr" path="res://scenes/quests/story_quests/last_coordinates/game_elements/botones.png" id="1_u3jtc"]
 [ext_resource type="Script" uid="uid://bjfrq6uu4innt" path="res://scenes/quests/story_quests/last_coordinates/codigo_scripts/boton_2.gd" id="1_whddq"]
 [ext_resource type="Texture2D" uid="uid://bwpktqe54khkb" path="res://scenes/quests/story_quests/last_coordinates/game_elements/botones_press.png" id="2_gsv3d"]
+[ext_resource type="Texture2D" uid="uid://b8dtdjg5q62t" path="res://scenes/quests/story_quests/last_coordinates/game_elements/botones_claros.png" id="3_gsv3d"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_iyb5h"]
 atlas = ExtResource("2_gsv3d")
@@ -16,7 +16,7 @@ script = ExtResource("1_whddq")
 textura_presionado = SubResource("AtlasTexture_iyb5h")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1902311343]
-texture = ExtResource("1_u3jtc")
+texture = ExtResource("3_gsv3d")
 region_enabled = true
 region_rect = Rect2(64, 0, 64, 64)
 

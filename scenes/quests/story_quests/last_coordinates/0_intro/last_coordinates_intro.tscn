@@ -36,7 +36,7 @@ texture = ExtResource("2_guibc")
 [node name="Cinematic" type="Node2D" parent="." unique_id=1548480762]
 script = ExtResource("4_r4foc")
 dialogue = ExtResource("5_mnl0q")
-next_scene = "uid://d2sn04popr4re"
+next_scene = "uid://pegf1mc61uqp"
 metadata/_custom_type_script = "uid://x1mxt6bmei2o"
 
 [node name="Wind" type="AudioStreamPlayer" parent="." unique_id=1655218587]

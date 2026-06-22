@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://qxoheote6u5p" path="res://scenes/quests/story_quests/last_coordinates/game_elements/Boton3.tscn" id="8_2mtg8"]
 [ext_resource type="PackedScene" uid="uid://b5xqi4o5rwbae" path="res://scenes/quests/story_quests/last_coordinates/game_elements/Boton4.tscn" id="9_fujnv"]
 [ext_resource type="PackedScene" uid="uid://djnq3850tu0wu" path="res://scenes/quests/story_quests/last_coordinates/game_elements/Boton5.tscn" id="10_e1jvj"]
+[ext_resource type="Script" uid="uid://csev4hv57utxv" path="res://scenes/game_logic/walk_behaviors/character_speeds.gd" id="12_2mtg8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_51b3p"]
 texture = ExtResource("3_5mpjs")
@@ -272,6 +273,9 @@ tile_size = Vector2i(64, 64)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_go0lf")
 
+[sub_resource type="Resource" id="Resource_fujnv"]
+script = ExtResource("12_2mtg8")
+
 [node name="Nivel1" type="Node2D" unique_id=2061369261]
 position = Vector2(0, -8)
 
@@ -352,10 +356,7 @@ boton_anterior = NodePath("../Boton4")
 
 [node name="Player" parent="." unique_id=296354958 instance=ExtResource("6_go0lf")]
 position = Vector2(168, -148)
-player_name = null
-mode = null
-speeds = null
-aiming_speed = null
+speeds = SubResource("Resource_fujnv")
 sprite_frames = null
 walk_sound_stream = null
 

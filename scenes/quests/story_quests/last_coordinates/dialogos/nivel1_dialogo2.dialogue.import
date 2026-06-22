@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://c7s4ilg8xfcam"
+path="res://.godot/imported/nivel1_dialogo2.dialogue-403ca8be9c164683d345034c3502ebfd.tres"
+
+[deps]
+
+source_file="res://scenes/quests/story_quests/last_coordinates/dialogos/nivel1_dialogo2.dialogue"
+dest_files=["res://.godot/imported/nivel1_dialogo2.dialogue-403ca8be9c164683d345034c3502ebfd.tres"]
+
+[params]
+
+defaults=true
