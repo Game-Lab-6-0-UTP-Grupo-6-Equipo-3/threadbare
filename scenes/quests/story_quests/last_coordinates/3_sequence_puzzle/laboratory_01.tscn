@@ -443,10 +443,11 @@ sprite_frames = ExtResource("9_te2ed")
 
 [node name="Camera2D" type="Camera2D" parent="UnderGround/Player1" unique_id=1633198284]
 unique_name_in_owner = true
+position = Vector2(-1, -15)
 zoom = Vector2(1.2, 1.2)
 limit_left = -185
-limit_top = -321
-limit_right = 3898
+limit_top = -351
+limit_right = 3939
 limit_bottom = 1715
 position_smoothing_enabled = true
 editor_draw_limits = true
@@ -588,26 +589,26 @@ Radius = 72.0
 unique_name_in_owner = true
 z_index = 7
 position = Vector2(896, -19)
-text = "No funciona, quiza si
+text = "No funciona, quizás si
 encuentre una manera de 
-activar la energia"
+activar la energía"
 
 [node name="loreThreadbare" parent="UnderGround" unique_id=1555431361 instance=ExtResource("17_sdk78")]
 z_index = 7
 position = Vector2(3786, 410)
-text = "INVESTIGACION #333
+text = "INVESTIGACIÓN #333
 Mundos alternativos
 entrelazados por hilos
-[letra ilegible ....]"
+[letra ilegible ...]"
 fontSize = 22
 Radius = 77.0
 
 [node name="MessageGuide1" parent="UnderGround" unique_id=785992460 instance=ExtResource("17_sdk78")]
 z_index = 7
-position = Vector2(2053, -162)
-text = "Otra vez te olvidaste
+position = Vector2(2055, -170)
+text = "¿Otra vez te olvidaste
 la secuencia? Por suerte
-deje la combinación en
+dejé la combinación en
 el complejo de oficinas
                            - T. C."
 

@@ -1,12 +1,15 @@
 # SPDX-FileCopyrightText: The Threadbare Authors
 # SPDX-License-Identifier: MPL-2.0
 ~ start
-Narrador: Tras una intensa batalla, el núcleo corrupto finalmente fue destruido.
+
+Tras una intensa batalla, el núcleo corrupto finalmente fue destruido.
 Sistema: Amenaza neutralizada.
 Sistema: Cura encontrada.
 Sistema: Civilización robótica asegurada.
-Narrador: Gracias al valor y la determinación de un simple robot, el futuro de toda la civilización fue salvado.
+Gracias al valor y la determinación de un simple robot, el futuro de toda la civilización fue salvado.
 Mazamorra: Ahora... es momento de reconstruir.
-La humanidad construyó este mundo. Los robots le dieron una segunda oportunidad.
+
+La humanidad construyó este mundo. 
+Los robots le dieron una segunda oportunidad.
 
 => END
