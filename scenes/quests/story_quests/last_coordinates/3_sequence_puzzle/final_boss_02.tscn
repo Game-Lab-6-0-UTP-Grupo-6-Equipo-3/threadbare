@@ -71,7 +71,6 @@ metadata/_custom_type_script = "uid://pk3ucq7e2eah"
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=206243688]
 unique_name_in_owner = true
-visible = false
 color = Color(0.025363795, 0.025363805, 0.02536378, 1)
 
 [node name="Cinematic" type="Node2D" parent="." unique_id=396048270]
