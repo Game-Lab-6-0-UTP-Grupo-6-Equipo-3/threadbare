@@ -1,5 +1,6 @@
 extends CharacterBody2D
-
+# 1. Creamos el "aviso"
+signal boton_presionado_con_exito
 @export var textura_presionado: Texture2D
 
 # Esta es la magia: Creamos una variable para decirle a este botón 
@@ -23,3 +24,9 @@ func presionar() -> void:
 	# EL FIX: Apagamos el recorte del Sprite2D para que no corte la nueva textura
 	$Sprite2D.region_enabled = false
 	# (Opcional para el futuro) Aquí podríamos avisarle al nivel que un botón fue presionado
+	# 2. Emitimos el aviso justo después de que el botón se activa correctamente
+	boton_presionado_con_exito.emit()
+
+
+func finalNivel1() -> void:
+	pass # Replace with function body.

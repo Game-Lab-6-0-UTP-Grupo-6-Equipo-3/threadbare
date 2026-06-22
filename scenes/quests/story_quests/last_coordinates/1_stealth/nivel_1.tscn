@@ -1,16 +1,26 @@
 [gd_scene format=4 uid="uid://pegf1mc61uqp"]
 
+[ext_resource type="Script" uid="uid://pk3ucq7e2eah" path="res://scenes/game_logic/player_mode.gd" id="1_7yean"]
+[ext_resource type="Script" uid="uid://dnp0tjloec2d7" path="res://scenes/game_logic/stealth_game_logic.gd" id="1_asq8d"]
+[ext_resource type="Script" uid="uid://d0a6gge1wnk0j" path="res://scenes/quests/story_quests/last_coordinates/codigo_scripts/nivel_1.gd" id="1_ddy81"]
 [ext_resource type="TileSet" uid="uid://dvfgelr47gt7l" path="res://scenes/quests/story_quests/last_coordinates/tiles/last_coordinates_exterior_floors.tres" id="1_ql5wj"]
 [ext_resource type="TileSet" uid="uid://dx67ierg72g4b" path="res://scenes/quests/story_quests/last_coordinates/tiles/last_coordinates_elevation_2.tres" id="2_tcrn3"]
 [ext_resource type="Texture2D" uid="uid://ocfg0u0t6m5k" path="res://scenes/quests/story_quests/last_coordinates/assets/laboratory_Tiles.png" id="3_0qkxq"]
+[ext_resource type="AudioStream" uid="uid://tf38vstwxm1t" path="res://scenes/quests/story_quests/last_coordinates/musica/The_Void_Creep_Intro.ogg" id="4_doct3"]
 [ext_resource type="Texture2D" uid="uid://kenx0efkqx85" path="res://scenes/quests/story_quests/last_coordinates/assets/wallsLaboratotyCurvedHigh_tiles.png" id="4_qceoe"]
-[ext_resource type="PackedScene" uid="uid://m0ylg1528fmq" path="res://scenes/quests/story_quests/last_coordinates/game_elements/CajaEmpujable.tscn" id="5_asq8d"]
+[ext_resource type="PackedScene" uid="uid://bym2x4mxm04jk" path="res://scenes/quests/story_quests/last_coordinates/assets/enemies/last_coordinates_guard.tscn" id="6_0qkxq"]
 [ext_resource type="PackedScene" uid="uid://blneq87pw3b00" path="res://scenes/quests/story_quests/last_coordinates/game_elements/Boton1.tscn" id="6_7yean"]
 [ext_resource type="PackedScene" uid="uid://lxmhfvt5oli3" path="res://scenes/quests/story_quests/last_coordinates/game_elements/Boton2.tscn" id="7_wxwlk"]
 [ext_resource type="PackedScene" uid="uid://qxoheote6u5p" path="res://scenes/quests/story_quests/last_coordinates/game_elements/Boton3.tscn" id="8_8aohe"]
 [ext_resource type="PackedScene" uid="uid://b5xqi4o5rwbae" path="res://scenes/quests/story_quests/last_coordinates/game_elements/Boton4.tscn" id="9_dhfv4"]
 [ext_resource type="PackedScene" uid="uid://djnq3850tu0wu" path="res://scenes/quests/story_quests/last_coordinates/game_elements/Boton5.tscn" id="10_doct3"]
 [ext_resource type="PackedScene" uid="uid://bpxgskxielp38" path="res://scenes/quests/story_quests/last_coordinates/player_components/player.tscn" id="11_ddy81"]
+[ext_resource type="Script" uid="uid://csev4hv57utxv" path="res://scenes/game_logic/walk_behaviors/character_speeds.gd" id="12_tcrn3"]
+[ext_resource type="SpriteFrames" uid="uid://6lrnci820w0p" path="res://scenes/quests/story_quests/last_coordinates/player_components/last_coordinates_player.tres" id="14_qceoe"]
+[ext_resource type="Script" uid="uid://c8405c212rbn6" path="res://scenes/game_elements/props/background_music/components/background_music.gd" id="16_wxwlk"]
+[ext_resource type="Script" uid="uid://x1mxt6bmei2o" path="res://scenes/ui_elements/cinematic/cinematic.gd" id="19_doct3"]
+[ext_resource type="Resource" uid="uid://b1hewjy7f32c" path="res://scenes/quests/story_quests/last_coordinates/dialogos/nivel1_dialogo1.dialogue" id="20_doct3"]
+[ext_resource type="Resource" uid="uid://c7s4ilg8xfcam" path="res://scenes/quests/story_quests/last_coordinates/dialogos/nivel1_dialogo2.dialogue" id="21_7mxcy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_51b3p"]
 texture = ExtResource("3_0qkxq")
@@ -272,11 +282,34 @@ tile_size = Vector2i(64, 64)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_go0lf")
 
+[sub_resource type="Curve2D" id="Curve2D_qceoe"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -575, -4289, 0, 0, 0, 0, -768, -4231, 0, 0, 0, 0, -1033, -4328, 0, 0, 0, 0, -1335, -4227, 0, 0, 0, 0, -1663, -4346, 0, 0, 0, 0, -1633, -4286)
+}
+point_count = 6
+
+[sub_resource type="Resource" id="Resource_0qkxq"]
+script = ExtResource("12_tcrn3")
+
 [node name="Nivel1" type="Node2D" unique_id=2061369261]
 position = Vector2(0, -8)
+script = ExtResource("1_ddy81")
+siguiente_escena = "uid://d2sn04popr4re"
 
-[node name="Enemigo" type="Node2D" parent="." unique_id=845508787]
-position = Vector2(0, -1)
+[node name="PlayerMode" type="Node" parent="." unique_id=669123168]
+script = ExtResource("1_7yean")
+metadata/_custom_type_script = "uid://pk3ucq7e2eah"
+
+[node name="StealthGameLogic" type="Node" parent="." unique_id=1913921461]
+script = ExtResource("1_asq8d")
+
+[node name="BackgroundMusic" type="Node" parent="." unique_id=921677745]
+script = ExtResource("16_wxwlk")
+stream = ExtResource("4_doct3")
+metadata/_custom_type_script = "uid://c8405c212rbn6"
+
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1104426663]
+color = Color(0.6501281, 0.53171694, 0.5338372, 1)
 
 [node name="TileMapLayers" type="Node2D" parent="." unique_id=1882935252]
 
@@ -309,53 +342,57 @@ position = Vector2(-92, 296)
 tile_map_data = PackedByteArray("AAAAAPn/AAADAAEAAAAAAPj/AAADAAEAAAAAAPf/AAABAAAAAAABAPf/AAABAAUAAAACAPf/AAABAAUAAAADAPf/AAABAAUAAAAEAPf/AAABAAUAAAAFAPf/AAACAAIAAAAFAPb/AAADAAEAAAAFAPX/AAAAAAAAAAAIAPj/AAADAAAAAAAIAPn/AAADAAEAAAAIAPX/AAABAAUAAAAHAPX/AAABAAIAAAAGAPX/AAABAAUAAAAJAPX/AAABAAUAAAAKAPX/AAABAAUAAAALAPf/AAADAAIAAAALAPb/AAADAAEAAAALAPX/AAACAAAAAAAHAPT/AAADAAEAAAAHAPP/AAADAAAAAAADAPH/AAADAAEAAAADAPL/AAACAAIAAAACAPL/AAAAAAAAAAACAPP/AAADAAEAAAACAPT/AAADAAIAAAD6//b/AAADAAEAAAD6//X/AAADAAEAAAD6//T/AAADAAEAAAD6//P/AAADAAEAAAD6//L/AAADAAEAAAD6//H/AAADAAEAAAD6//D/AAADAAEAAAD6/+//AAADAAEAAAD6//f/AAADAAIAAAD9//f/AAAAAAIAAAD+//f/AAABAAUAAAD///f/AAABAAUAAAD9//T/AAADAAAAAAD9//X/AAADAAEAAAD9//b/AAADAAEAAAADAO//AAADAAEAAAADAPD/AAADAAEAAAAAAPr/AAACAAEAAAADAO7/AAABAAEAAAD6/+7/AAABAAEAAAAIAPr/AAABAAEAAAA=")
 tile_set = SubResource("TileSet_5mpjs")
 
-[node name="Cajas_inicio" type="Node2D" parent="." unique_id=1404932220]
-visible = false
-position = Vector2(92, -297)
+[node name="Enemigo" type="Node2D" parent="." unique_id=845508787]
+position = Vector2(3, 10)
 
-[node name="CajaEmpujable" parent="Cajas_inicio" unique_id=168112969 groups=["caja"] instance=ExtResource("5_asq8d")]
-position = Vector2(6, 1)
+[node name="Guard1" parent="Enemigo" unique_id=689832587 node_paths=PackedStringArray("patrol_path") instance=ExtResource("6_0qkxq")]
+position = Vector2(-543, -663)
+patrol_path = NodePath("../Guard1 - Patrol Path")
 
-[node name="CajaEmpujable2" parent="Cajas_inicio" unique_id=1968084335 groups=["caja"] instance=ExtResource("5_asq8d")]
-position = Vector2(64, 0)
-
-[node name="CajaEmpujable3" parent="Cajas_inicio" unique_id=378098889 groups=["caja"] instance=ExtResource("5_asq8d")]
-position = Vector2(126, 1)
-
-[node name="CajaEmpujable4" parent="Cajas_inicio" unique_id=1300270130 groups=["caja"] instance=ExtResource("5_asq8d")]
-position = Vector2(191, 2)
-
-[node name="CajaEmpujable5" parent="Cajas_inicio" unique_id=1079344575 groups=["caja"] instance=ExtResource("5_asq8d")]
-position = Vector2(197, 333)
+[node name="Guard1 - Patrol Path" type="Path2D" parent="Enemigo" unique_id=671717359]
+position = Vector2(32, 3626)
+curve = SubResource("Curve2D_qceoe")
 
 [node name="Botones" type="Node2D" parent="." unique_id=153579530]
 position = Vector2(92, -297)
 
 [node name="Boton5" parent="Botones" unique_id=1812927113 node_paths=PackedStringArray("boton_anterior") instance=ExtResource("10_doct3")]
-position = Vector2(161, -137)
+position = Vector2(-1753, -1163)
 boton_anterior = NodePath("../Boton4")
 
 [node name="Boton4" parent="Botones" unique_id=1315247921 node_paths=PackedStringArray("boton_anterior") instance=ExtResource("9_dhfv4")]
-position = Vector2(175, 144)
+position = Vector2(738, -617)
 boton_anterior = NodePath("../Boton3")
 
 [node name="Boton3" parent="Botones" unique_id=322527907 node_paths=PackedStringArray("boton_anterior") instance=ExtResource("8_8aohe")]
+position = Vector2(-542, -610)
 boton_anterior = NodePath("../Boton2")
 
 [node name="Boton2" parent="Botones" unique_id=705676458 node_paths=PackedStringArray("boton_anterior") instance=ExtResource("7_wxwlk")]
-position = Vector2(79, -11)
+position = Vector2(-1177, -1146)
 boton_anterior = NodePath("../Boton1")
 
 [node name="Boton1" parent="Botones" unique_id=1123708454 instance=ExtResource("6_7yean")]
-position = Vector2(99, 303)
+position = Vector2(96, 318)
 
-[node name="Player" parent="." unique_id=296354958 instance=ExtResource("11_ddy81")]
-position = Vector2(168, -148)
-player_name = null
-mode = null
-speeds = null
-aiming_speed = null
-sprite_frames = null
-walk_sound_stream = null
+[node name="Player" parent="." unique_id=36707813 instance=ExtResource("11_ddy81")]
+position = Vector2(179, -100)
+speeds = SubResource("Resource_0qkxq")
+sprite_frames = ExtResource("14_qceoe")
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=2080981393]
+
+[node name="Cinematic" type="Node2D" parent="." unique_id=1441688070]
+position = Vector2(47, 26)
+script = ExtResource("19_doct3")
+dialogue = ExtResource("20_doct3")
+metadata/_custom_type_script = "uid://x1mxt6bmei2o"
+
+[node name="Cinematic2" type="Node2D" parent="." unique_id=105096582]
+position = Vector2(94, 52)
+script = ExtResource("19_doct3")
+dialogue = ExtResource("21_7mxcy")
+autostart = false
+metadata/_custom_type_script = "uid://x1mxt6bmei2o"
+
+[connection signal="boton_presionado_con_exito" from="Botones/Boton5" to="." method="finalNivel1"]
