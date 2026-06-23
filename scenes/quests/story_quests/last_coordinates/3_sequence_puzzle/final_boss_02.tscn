@@ -125,8 +125,9 @@ tile_set = ExtResource("10_71pee")
 y_sort_enabled = true
 
 [node name="Player" parent="Underground" unique_id=296354958 instance=ExtResource("9_fef25")]
+z_index = 5
 y_sort_enabled = true
-position = Vector2(137, 469)
+position = Vector2(196, 493)
 sprite_frames = ExtResource("10_h2wks")
 
 [node name="Camera2D" type="Camera2D" parent="Underground/Player" unique_id=1690936989]
