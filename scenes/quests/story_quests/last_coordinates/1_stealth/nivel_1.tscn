@@ -459,7 +459,7 @@ position = Vector2(96, 318)
 
 [node name="Player" parent="." unique_id=36707813 instance=ExtResource("11_ddy81")]
 z_index = 5
-position = Vector2(-92, -461)
+position = Vector2(185, -7)
 speeds = SubResource("Resource_0qkxq")
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=2080981393]
