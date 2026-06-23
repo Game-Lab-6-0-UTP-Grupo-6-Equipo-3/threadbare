@@ -3,8 +3,8 @@
 [ext_resource type="Script" uid="uid://cggc1bfe40mu1" path="res://scenes/quests/story_quests/last_coordinates/assets/misc/last_coordinates_movingBackground.gd" id="1_licu5"]
 [ext_resource type="Texture2D" uid="uid://3psedm6cbusx" path="res://scenes/quests/story_quests/last_coordinates/4_outro/outro_components/fondo_outro.png" id="2_licu5"]
 [ext_resource type="Script" uid="uid://x1mxt6bmei2o" path="res://scenes/ui_elements/cinematic/cinematic.gd" id="3_4shfv"]
-[ext_resource type="AudioStream" uid="uid://bbamdm6wtjjcn" path="res://assets/first_party/music/Threadbare_Bed.ogg" id="3_cvos4"]
 [ext_resource type="Resource" uid="uid://cktpegt7uy822" path="res://scenes/quests/story_quests/last_coordinates/4_outro/outro_components/last_coordinates_outro.dialogue" id="4_lj7y2"]
+[ext_resource type="AudioStream" uid="uid://l8a6k3jepllx" path="res://scenes/quests/story_quests/last_coordinates/assets/sounds/wind.wav" id="5_w7m3j"]
 
 [node name="Outro" type="Control" unique_id=1365488581 node_paths=PackedStringArray("camera", "background")]
 layout_mode = 3
@@ -17,11 +17,6 @@ script = ExtResource("1_licu5")
 camera = NodePath("Camera")
 background = NodePath("MovableBackground")
 duration = 45.0
-
-[node name="bgm" type="AudioStreamPlayer" parent="." unique_id=1452307961]
-stream = ExtResource("3_cvos4")
-volume_db = -5.0
-autoplay = true
 
 [node name="Camera" type="Camera2D" parent="." unique_id=1731394362]
 position = Vector2(644, 388)
@@ -41,5 +36,9 @@ texture = ExtResource("2_licu5")
 [node name="Cinematic" type="Node2D" parent="." unique_id=1548480762]
 script = ExtResource("3_4shfv")
 dialogue = ExtResource("4_lj7y2")
-next_scene = "uid://cufkthb25mpxy"
 metadata/_custom_type_script = "uid://x1mxt6bmei2o"
+
+[node name="Wind" type="AudioStreamPlayer" parent="." unique_id=1655218587]
+stream = ExtResource("5_w7m3j")
+volume_db = -15.0
+autoplay = true

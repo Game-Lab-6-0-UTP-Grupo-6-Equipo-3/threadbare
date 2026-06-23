@@ -1,21 +1,9 @@
 [gd_resource type="Resource" script_class="Quest" format=3 uid="uid://djq2phkoretwb"]
 
 [ext_resource type="Script" uid="uid://dts1hwdy3phin" path="res://scenes/menus/storybook/components/quest.gd" id="1_r7uhw"]
-[ext_resource type="SpriteFrames" uid="uid://6lrnci820w0p" path="res://scenes/quests/story_quests/last_coordinates/player_components/last_coordinates_player.tres" id="2_uip6d"]
 
 [resource]
 script = ExtResource("1_r7uhw")
 title = "Last Coordinates"
-description = "Han pasado 20 años desde la extinción de la humanidad. En su ausencia, las máquinas heredaron el mundo.
-
-La Inteligencia Artificial se ha desarrollado lo suficiente para permitir el auge de la civilización robot como reemplazo de la humanidad.
-
-Sin embargo, esta paz no seria duradera, pues un extraño fenómeno digital altera la programación de la mayor parte de robots en la tierra.
-
-Nuestro valiente héroe toma disposición en encontrar el origen de este fenómeno y revertir sus efectos."
-authors = Array[String](["Mateo P"])
-affiliation = "GameLab 6 UTP"
 first_scene = "uid://cr7y2hgx0mr5e"
-sprite_frames = ExtResource("2_uip6d")
-animation_name = &"idle"
 metadata/_custom_type_script = "uid://dts1hwdy3phin"
