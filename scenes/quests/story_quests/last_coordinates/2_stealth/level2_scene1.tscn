@@ -19,7 +19,7 @@
 [ext_resource type="Script" uid="uid://x1mxt6bmei2o" path="res://scenes/ui_elements/cinematic/cinematic.gd" id="15_ouvpq"]
 [ext_resource type="PackedScene" uid="uid://cm6u2v13a1dgt" path="res://scenes/quests/story_quests/last_coordinates/objects/checkpoint/last_coordinates_checkpoint.tscn" id="15_yuvam"]
 [ext_resource type="Resource" uid="uid://dafewhmikjlc4" path="res://scenes/quests/story_quests/last_coordinates/2_stealth/stealth_components/lc_checkpoint1.dialogue" id="16_0g42c"]
-[ext_resource type="Resource" uid="uid://bijrun6i7dk12" path="res://scenes/quests/story_quests/last_coordinates/2_stealth/stealth_components/start.dialogue" id="16_r1qp8"]
+[ext_resource type="Resource" uid="uid://bijrun6i7dk12" path="res://scenes/quests/story_quests/last_coordinates/2_stealth/stealth_components/start1.dialogue" id="16_r1qp8"]
 [ext_resource type="Script" uid="uid://hqdquinbimce" path="res://scenes/game_elements/props/teleporter/teleporter.gd" id="20_piun6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5lsdd"]
@@ -323,7 +323,7 @@ formas de llegar a tu destino"
 [node name="Sign1" parent="Stuff" unique_id=173756565 instance=ExtResource("7_0g42c")]
 position = Vector2(2707, 2468)
 direction = 1
-text = "q"
+text = "Hacia el centro de la ciudad"
 
 [node name="Sign2" parent="Stuff" unique_id=656277832 instance=ExtResource("7_0g42c")]
 position = Vector2(1589, 1680)

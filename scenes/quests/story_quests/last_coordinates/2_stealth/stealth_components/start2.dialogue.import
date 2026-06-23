@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bmuk4jlibnmj0"
+path="res://.godot/imported/start2.dialogue-4e586b1adf2eb8b6e7d9570fe52ce838.tres"
+
+[deps]
+
+source_file="res://scenes/quests/story_quests/last_coordinates/2_stealth/stealth_components/start2.dialogue"
+dest_files=["res://.godot/imported/start2.dialogue-4e586b1adf2eb8b6e7d9570fe52ce838.tres"]
+
+[params]
+
+defaults=true
