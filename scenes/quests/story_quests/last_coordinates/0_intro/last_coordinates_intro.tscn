@@ -5,12 +5,14 @@
 [ext_resource type="Script" uid="uid://x1mxt6bmei2o" path="res://scenes/ui_elements/cinematic/cinematic.gd" id="4_r4foc"]
 [ext_resource type="AudioStream" uid="uid://l8a6k3jepllx" path="res://scenes/quests/story_quests/last_coordinates/assets/sounds/wind.wav" id="5_004mb"]
 [ext_resource type="Resource" uid="uid://605yq2704do" path="res://scenes/quests/story_quests/last_coordinates/0_intro/intro_components/last_coordinates_intro.dialogue" id="5_mnl0q"]
+[ext_resource type="AudioStream" uid="uid://1pww50a3f6md" path="res://assets/first_party/music/The_Void_Still.ogg" id="7_v88xo"]
 
 [node name="Intro" type="Control" unique_id=1365488581 node_paths=PackedStringArray("camera", "background")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_bottom = 1329.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_004mb")
@@ -18,19 +20,23 @@ camera = NodePath("Camera")
 background = NodePath("MovableBackground")
 duration = 45.0
 
+[node name="bgm" type="AudioStreamPlayer" parent="." unique_id=2037235784]
+stream = ExtResource("7_v88xo")
+volume_db = -10.0
+autoplay = true
+
 [node name="Camera" type="Camera2D" parent="." unique_id=1731394362]
-position = Vector2(644, 388)
 limit_left = 0
 limit_top = 0
-limit_right = 100
-limit_bottom = 1536
+limit_right = 1920
+limit_bottom = 2304
 limit_smoothed = true
 
 [node name="MovableBackground" type="TextureRect" parent="." unique_id=107219556]
 layout_mode = 0
 offset_right = 320.0
 offset_bottom = 384.0
-scale = Vector2(4, 4)
+scale = Vector2(6, 6)
 texture = ExtResource("2_guibc")
 
 [node name="Cinematic" type="Node2D" parent="." unique_id=1548480762]
