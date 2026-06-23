@@ -12,6 +12,8 @@ region = Rect2(64, 0, 64, 64)
 size = Vector2(60, 60)
 
 [node name="Boton2" type="CharacterBody2D" unique_id=705676458 groups=["boton"]]
+collision_layer = 16
+collision_mask = 0
 script = ExtResource("1_whddq")
 textura_presionado = SubResource("AtlasTexture_iyb5h")
 
