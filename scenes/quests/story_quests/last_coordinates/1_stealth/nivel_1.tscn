@@ -2,10 +2,7 @@
 
 [ext_resource type="Script" uid="uid://pk3ucq7e2eah" path="res://scenes/game_logic/player_mode.gd" id="1_7yean"]
 [ext_resource type="Script" uid="uid://dnp0tjloec2d7" path="res://scenes/game_logic/stealth_game_logic.gd" id="1_asq8d"]
-[ext_resource type="Script" path="res://scenes/quests/story_quests/last_coordinates/codigo_scripts/nivel_1.gd" id="1_ddy81"]
-[ext_resource type="TileSet" uid="uid://dvfgelr47gt7l" path="res://scenes/quests/story_quests/last_coordinates/tiles/last_coordinates_exterior_floors.tres" id="1_ql5wj"]
-[ext_resource type="TileSet" uid="uid://dx67ierg72g4b" path="res://scenes/quests/story_quests/last_coordinates/tiles/last_coordinates_elevation_2.tres" id="2_tcrn3"]
-[ext_resource type="Texture2D" uid="uid://ocfg0u0t6m5k" path="res://scenes/quests/story_quests/last_coordinates/assets/laboratory_Tiles.png" id="3_0qkxq"]
+[ext_resource type="Script" uid="uid://d0a6gge1wnk0j" path="res://scenes/quests/story_quests/last_coordinates/codigo_scripts/nivel_1.gd" id="1_ddy81"]
 [ext_resource type="AudioStream" uid="uid://tf38vstwxm1t" path="res://scenes/quests/story_quests/last_coordinates/musica/The_Void_Creep_Intro.ogg" id="4_doct3"]
 [ext_resource type="PackedScene" uid="uid://bym2x4mxm04jk" path="res://scenes/quests/story_quests/last_coordinates/assets/enemies/last_coordinates_guard.tscn" id="6_0qkxq"]
 [ext_resource type="PackedScene" uid="uid://blneq87pw3b00" path="res://scenes/quests/story_quests/last_coordinates/game_elements/Boton1.tscn" id="6_7yean"]
@@ -15,9 +12,10 @@
 [ext_resource type="PackedScene" uid="uid://b5xqi4o5rwbae" path="res://scenes/quests/story_quests/last_coordinates/game_elements/Boton4.tscn" id="9_dhfv4"]
 [ext_resource type="Texture2D" uid="uid://blhb6vqd66ejl" path="res://scenes/quests/story_quests/last_coordinates/assets/industry_Tiles.png" id="9_xd5wu"]
 [ext_resource type="PackedScene" uid="uid://djnq3850tu0wu" path="res://scenes/quests/story_quests/last_coordinates/game_elements/Boton5.tscn" id="10_doct3"]
-[ext_resource type="PackedScene" uid="uid://bpxgskxielp38" path="res://scenes/quests/story_quests/last_coordinates/player_components/last_coordinates_player.tscn" id="11_ddy81"]
+[ext_resource type="PackedScene" uid="uid://bpxgskxielp38" path="res://scenes/quests/story_quests/last_coordinates/player_components/player.tscn" id="11_ddy81"]
 [ext_resource type="Script" uid="uid://csev4hv57utxv" path="res://scenes/game_logic/walk_behaviors/character_speeds.gd" id="12_tcrn3"]
 [ext_resource type="TileSet" uid="uid://byot6grk1xg53" path="res://scenes/quests/story_quests/last_coordinates/tiles/industryDecoration.tres" id="12_u624a"]
+[ext_resource type="SpriteFrames" uid="uid://6lrnci820w0p" path="res://scenes/quests/story_quests/last_coordinates/player_components/last_coordinates_player.tres" id="14_qceoe"]
 [ext_resource type="Script" uid="uid://c8405c212rbn6" path="res://scenes/game_elements/props/background_music/components/background_music.gd" id="16_wxwlk"]
 [ext_resource type="Script" uid="uid://x1mxt6bmei2o" path="res://scenes/ui_elements/cinematic/cinematic.gd" id="19_doct3"]
 [ext_resource type="Resource" uid="uid://b1hewjy7f32c" path="res://scenes/quests/story_quests/last_coordinates/dialogos/nivel1_dialogo1.dialogue" id="20_doct3"]
@@ -164,8 +162,9 @@ position = Vector2(96, 318)
 
 [node name="Player" parent="." unique_id=36707813 instance=ExtResource("11_ddy81")]
 z_index = 5
-position = Vector2(185, -7)
+position = Vector2(179, -100)
 speeds = SubResource("Resource_0qkxq")
+sprite_frames = ExtResource("14_qceoe")
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=2080981393]
 
