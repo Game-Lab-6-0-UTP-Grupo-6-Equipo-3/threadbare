@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://d2sn04popr4re"]
+[gd_scene format=4 uid="uid://bpfeppqa50hc5"]
 
 [ext_resource type="Script" uid="uid://dnp0tjloec2d7" path="res://scenes/game_logic/stealth_game_logic.gd" id="1_1nuda"]
 [ext_resource type="TileSet" uid="uid://dvfgelr47gt7l" path="res://scenes/quests/story_quests/last_coordinates/tiles/last_coordinates_exterior_floors.tres" id="2_rocmy"]
