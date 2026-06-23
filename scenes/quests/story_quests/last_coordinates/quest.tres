@@ -12,8 +12,8 @@ La Inteligencia Artificial se ha desarrollado lo suficiente para permitir el aug
 
 Sin embargo, esta paz no seria duradera, pues un extraño fenómeno digital altera la programación de la mayor parte de robots en la tierra.
 
-Nuestro valiente héroe toma disposición en encontrar el origen de este fenómeno y revertir sus efectos."
-authors = Array[String](["Mateo P"])
+Nuestro valiente héroe Mazamorra toma disposición en encontrar el origen de este fenómeno y revertir sus efectos."
+authors = Array[String](["Mateo Pariona Castro", "Ronaldo Basilio Enciso Luque", "Sara Amalia de los Angeles Andrade Hidalgo", "Nitzanah Villasante"])
 affiliation = "GameLab 6 UTP"
 first_scene = "uid://cr7y2hgx0mr5e"
 sprite_frames = ExtResource("2_uip6d")

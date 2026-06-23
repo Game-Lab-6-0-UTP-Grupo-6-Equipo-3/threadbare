@@ -7,10 +7,13 @@ Han pasado 20 años desde la extinción de la humanidad.
 En su ausencia, las máquinas heredaron el mundo.
 La Inteligencia Artificial se ha desarrollado lo suficiente para permitir el auge de la civilización robot como reemplazo de la humanidad.
 
-Mazamorra: Extraño... Las señales de la red están inestables. Hace semanas que detecto pequeñas anomalías.
+# Mejorar el dialogo
+Protagonista: Extraño...  Las señales de la red están inestables. Hace semanas que detecto pequeñas anomalías.
 Sistema: Advertencia. Corrupción detectada en nodos cercanos.
-Mazamorra: ¿Corrupción? Nunca había visto una alerta de ese tipo.
+Protagonista: ¿Corrupción? Nunca había visto una alerta de ese tipo.
 Sistema: Origen desconocido. Propagación activa.
-Sistema: Dos fragmentos de coordenadas han sido localizados.
-Mazamorra: Entonces encontraré esos fragmentos. Y descubriré qué está causando todo esto.
+Sistema: Tres fragmentos de coordenadas han sido localizados.
+Protagonista: Entonces encontraré esos fragmentos. Y descubriré qué está causando todo esto.
+
+
 => END

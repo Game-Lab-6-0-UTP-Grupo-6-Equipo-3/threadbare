@@ -12,6 +12,7 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_bottom = 1329.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_004mb")
@@ -25,18 +26,17 @@ volume_db = -10.0
 autoplay = true
 
 [node name="Camera" type="Camera2D" parent="." unique_id=1731394362]
-position = Vector2(644, 388)
 limit_left = 0
 limit_top = 0
-limit_right = 100
-limit_bottom = 1536
+limit_right = 1920
+limit_bottom = 2304
 limit_smoothed = true
 
 [node name="MovableBackground" type="TextureRect" parent="." unique_id=107219556]
 layout_mode = 0
 offset_right = 320.0
 offset_bottom = 384.0
-scale = Vector2(4, 4)
+scale = Vector2(6, 6)
 texture = ExtResource("2_guibc")
 
 [node name="Cinematic" type="Node2D" parent="." unique_id=1548480762]
