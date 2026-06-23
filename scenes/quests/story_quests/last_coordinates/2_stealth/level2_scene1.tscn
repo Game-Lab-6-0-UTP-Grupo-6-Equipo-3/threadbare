@@ -310,28 +310,27 @@ dialogue = ExtResource("16_r1qp8")
 metadata/_custom_type_script = "uid://x1mxt6bmei2o"
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=508226475]
-visible = false
 color = Color(0.21230483, 0.21230483, 0.21230483, 1)
 
 [node name="Stuff" type="Node2D" parent="." unique_id=1903888410]
 
-[node name="Sign" parent="Stuff" unique_id=1579530966 instance=ExtResource("7_0g42c")]
+[node name="SignStart" parent="Stuff" unique_id=1579530966 instance=ExtResource("7_0g42c")]
 position = Vector2(326, 2456)
 direction = 1
 text = "Recuerda que hay muchas
 formas de llegar a tu destino"
 
-[node name="Sign2" parent="Stuff" unique_id=173756565 instance=ExtResource("7_0g42c")]
+[node name="Sign1" parent="Stuff" unique_id=173756565 instance=ExtResource("7_0g42c")]
 position = Vector2(2707, 2468)
 direction = 1
 text = "q"
 
-[node name="Sign3" parent="Stuff" unique_id=656277832 instance=ExtResource("7_0g42c")]
+[node name="Sign2" parent="Stuff" unique_id=656277832 instance=ExtResource("7_0g42c")]
 position = Vector2(1589, 1680)
 direction = 1
 text = "Hacia el centro de la ciudad"
 
-[node name="Sign4" parent="Stuff" unique_id=1571574030 instance=ExtResource("7_0g42c")]
+[node name="Sign3" parent="Stuff" unique_id=1571574030 instance=ExtResource("7_0g42c")]
 position = Vector2(863, 2680)
 direction = 1
 text = "Hacia el centro de la ciudad"
