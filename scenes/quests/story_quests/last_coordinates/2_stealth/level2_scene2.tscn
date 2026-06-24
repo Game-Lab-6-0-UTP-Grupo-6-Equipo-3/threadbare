@@ -9,6 +9,7 @@
 [ext_resource type="Resource" uid="uid://bmuk4jlibnmj0" path="res://scenes/quests/story_quests/last_coordinates/2_stealth/stealth_components/start2.dialogue" id="6_1kbn2"]
 [ext_resource type="Texture2D" uid="uid://ce864ov55arwi" path="res://scenes/quests/story_quests/last_coordinates/assets/floor/wooden_floor.png" id="6_mgv8s"]
 [ext_resource type="Texture2D" uid="uid://dr716dyuhjv05" path="res://scenes/quests/story_quests/last_coordinates/assets/misc/spotlight.png" id="7_epnnw"]
+[ext_resource type="PackedScene" path="res://scenes/quests/story_quests/last_coordinates/player_components/last_coordinates_player.tscn" id="7_hhr7y"]
 [ext_resource type="Texture2D" uid="uid://4ugpmvga32eo" path="res://scenes/quests/story_quests/last_coordinates/assets/minigame2_bricks.png" id="9_bff13"]
 [ext_resource type="TileSet" uid="uid://wmbjixcfjle5" path="res://scenes/quests/story_quests/last_coordinates/tiles/decorations.tres" id="10_hhr7y"]
 [ext_resource type="TileSet" uid="uid://c7ld0e2dg7htx" path="res://scenes/quests/story_quests/last_coordinates/assets/buildings/buildings.tres" id="11_s7i34"]
@@ -203,7 +204,7 @@ point_count = 5
 
 [sub_resource type="Curve2D" id="Curve2D_cj4uv"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 972, -39, 0, 0, 0, 0, 1529, -43, 0, 0, 0, 0, 1534, 543, 0, 0, 0, 0, 950, 542, 0, 0, 0, 0, 972, -39)
+"points": PackedVector2Array(0, 0, 0, 0, 953, -57, 0, 0, 0, 0, 1514, -47, 0, 0, 0, 0, 1513, 543, 0, 0, 0, 0, 950, 542, 0, 0, 0, 0, 953, -57)
 }
 point_count = 5
 
@@ -261,6 +262,56 @@ metadata/_custom_type_script = "uid://x1mxt6bmei2o"
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1620393872]
 color = Color(0.12955853, 0.12955844, 0.12955844, 1)
 
+[node name="Player" parent="." unique_id=296354958 instance=ExtResource("7_hhr7y")]
+z_index = 5
+position = Vector2(68, 1803)
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1196891219]
+process_mode = 3
+limit_left = 0
+limit_top = 0
+limit_right = 4403
+limit_bottom = 2803
+position_smoothing_enabled = true
+editor_draw_limits = true
+
+[node name="PointLight2D2" type="PointLight2D" parent="Player" unique_id=2098390639]
+color = Color(0.67349255, 0.6174666, 0.393363, 1)
+texture = ExtResource("7_epnnw")
+offset = Vector2(3, -30)
+
+[node name="Stuff" type="Node2D" parent="." unique_id=1219901960]
+position = Vector2(998, 464)
+
+[node name="Shadow" type="PointLight2D" parent="Stuff" unique_id=524101616]
+position = Vector2(1495, 999)
+color = Color(0.2003848, 0.21283503, 0.30621156, 1)
+blend_mode = 1
+shadow_enabled = true
+texture = ExtResource("7_epnnw")
+texture_scale = 2.0
+
+[node name="SignStart" parent="Stuff" unique_id=1579530966 instance=ExtResource("16_hbdua")]
+position = Vector2(-866, 1217)
+direction = 1
+text = "Recuerda que hay muchas
+formas de llegar a tu destino"
+
+[node name="Sign1" parent="Stuff" unique_id=834564288 instance=ExtResource("16_hbdua")]
+position = Vector2(-581, 1222)
+direction = 1
+text = "Hacia el centro de la ciudad"
+
+[node name="Sign2" parent="Stuff" unique_id=515520956 instance=ExtResource("16_hbdua")]
+position = Vector2(569, 146)
+direction = 1
+text = "Hacia el centro de la ciudad"
+
+[node name="Sign3" parent="Stuff" unique_id=801303948 instance=ExtResource("16_hbdua")]
+position = Vector2(782, 1446)
+direction = 1
+text = "Hacia el centro de la ciudad"
+
 [node name="TileMapLayers" type="Node2D" parent="." unique_id=1475451359]
 y_sort_enabled = true
 
@@ -270,7 +321,7 @@ tile_map_data = PackedByteArray("AAAGABoAAAAKAAAAAAAFABoAAAAKAAAAAAAEABoAAAAKAAA
 tile_set = SubResource("TileSet_rhgso")
 
 [node name="Decorations" type="TileMapLayer" parent="TileMapLayers" unique_id=2026668137]
-tile_map_data = PackedByteArray("AABOABUAAAAAAAYAAABEABUAAAAQAAkAAABEABsAAAAIAAgAAAA9ACoAAAAIAAMAAABBACoAAAAIAAMAAABFACoAAAAIAAMAAAA6AC4AAAAEAAcAAABAAC0AAAAEAAcAAABDADAAAAAGAAcAAABHAC8AAAAGAAcAAABPAC0AAAAEAAcAAAA8ABUAAAALAAQAAABFABwAAAAOAAgAAABCABYAAAAOAAgAAABVABwAAAALAAoAAABTABkAAAALAAoAAABJACsAAAALAAQAAAA8ACQAAAALAAQAAAA7ACkAAAAJAAgAAABUACMAAAAJAAgAAACLAEIAAAAAAAAAAACEAEIAAAAAAAAAAAB6AEIAAAAAAAAAAACaAB0AAAAIAAAAAACqADMAAAAAAAAAAACjADMAAAAAAAAAAACcADMAAAAAAAAAAACVADMAAAAAAAAAAAClAB4AAAAEAAQAAAClAB0AAAAEAAQAAACiAB0AAAAEAAQAAACgAB0AAAAEAAQAAACKAIkAAAAJAAgAAACgAIkAAAAAAAYAAACfACUAAAAAAAAAAACCACkAAAALAAQAAAB8ACwAAAALAAQAAACuAC4AAAALAAoAAACCAEgAAAALAAQAAACLAEUAAAALAAQAAACUAEAAAAALAAQAAACXAEoAAAALAAQAAAB5AC4AAAALAAQAAAB5AC0AAAALAAQAAAB3ACkAAAALAAQAAAB7AEUAAAAJAAgAAAB7AEYAAAAJAAgAAAB8AEYAAAAJAAgAAACIAEkAAAAJAAgAAACXAEUAAAAJAAgAAACNADYAAAAJAAgAAACEADcAAAAJAAgAAAB6AC0AAAAJAAgAAAB2ACsAAAAJAAgAAACFACoAAAAJAAgAAACGACoAAAAJAAgAAACIACsAAAAJAAgAAACUACgAAAAJAAgAAACRACQAAAALAAoAAACTACAAAAALAAoAAACsACsAAAALAAoAAACrACsAAAALAAoAAACqACgAAAALAAoAAACpACkAAAALAAoAAACnACsAAAALAAoAAACtAC4AAAALAAoAAACuAC8AAAALAAoAAACvAC8AAAALAAoAAAC0ACwAAAALAAoAAAC0ACsAAAALAAoAAACDACkAAAALAAoAAACDACoAAAALAAoAAAB+AC0AAAALAAoAAAB9AC0AAAALAAoAAAB8AC0AAAALAAoAAAB9AC4AAAALAAoAAAB+AC4AAAALAAoAAAB/AC4AAAALAAoAAACAAC8AAAALAAoAAACBAC8AAAALAAoAAACSAD4AAAAOAAgAAACoADkAAAAOAAgAAACfADgAAAAJAAgAAACkADQAAAAJAAgAAACeADEAAAAJAAgAAACdADEAAAAJAAgAAACWACwAAAAJAAgAAACDADIAAAAJAAgAAAB8ADYAAAAJAAgAAAB7ADYAAAAJAAgAAAB6ADYAAAAJAAgAAACIAEQAAAAJAAgAAAChACIAAAAEAAgAAACXADAAAAAEAAgAAACeADAAAAAEAAgAAAClADAAAAAEAAgAAACsADAAAAAEAAgAAACFADMAAAAIAAMAAAB+ADMAAAAAAAAAAAB7ADMAAAAIAAMAAACAADAAAAAEAAgAAACBAEIAAAAIAAMAAACGAD8AAAAEAAgAAACNAD8AAAAEAAgAAAB8AD8AAAAEAAgAAACYAEMAAAAQAAsAAACcAEMAAAAQAAsAAACgAEMAAAAQAAsAAACkAEMAAAAQAAsAAACoAEMAAAAQAAsAAACsAEMAAAAQAAsAAACkACQAAAAAAAsAAAB4ACQAAAAQAAsAAAB8ACQAAAAQAAsAAACAACQAAAAQAAsAAACEACQAAAAQAAsAAACIACQAAAAQAAsAAACFAJAAAAAAAAAAAACHAI0AAAAEAAgAAACMAI8AAAAIAAMAAACMAIQAAAAHAAAAAACdACQAAAAHAAAAAABZAAwAAAAHAAAAAAA=")
+tile_map_data = PackedByteArray("AABOABUAAAAAAAYAAABEABUAAAAQAAkAAABEABsAAAAIAAgAAAA9ACoAAAAIAAMAAABBACoAAAAIAAMAAABFACoAAAAIAAMAAAA6AC4AAAAEAAcAAABAAC0AAAAEAAcAAABDADAAAAAGAAcAAABHAC8AAAAGAAcAAABPAC0AAAAEAAcAAAA8ABUAAAALAAQAAABFABwAAAAOAAgAAABCABYAAAAOAAgAAABVABwAAAALAAoAAABTABkAAAALAAoAAABJACsAAAALAAQAAAA8ACQAAAALAAQAAAA7ACkAAAAJAAgAAABUACMAAAAJAAgAAACLAEIAAAAAAAAAAACEAEIAAAAAAAAAAAB6AEIAAAAAAAAAAACaAB0AAAAIAAAAAACqADMAAAAAAAAAAACjADMAAAAAAAAAAACcADMAAAAAAAAAAACVADMAAAAAAAAAAAClAB4AAAAEAAQAAAClAB0AAAAEAAQAAACiAB0AAAAEAAQAAACgAB0AAAAEAAQAAACKAIkAAAAJAAgAAACgAIkAAAAAAAYAAACfACUAAAAAAAAAAACCACkAAAALAAQAAAB8ACwAAAALAAQAAACuAC4AAAALAAoAAACCAEgAAAALAAQAAACLAEUAAAALAAQAAACUAEAAAAALAAQAAACXAEoAAAALAAQAAAB5AC4AAAALAAQAAAB5AC0AAAALAAQAAAB3ACkAAAALAAQAAAB7AEUAAAAJAAgAAAB7AEYAAAAJAAgAAAB8AEYAAAAJAAgAAACIAEkAAAAJAAgAAACXAEUAAAAJAAgAAACNADYAAAAJAAgAAACEADcAAAAJAAgAAAB6AC0AAAAJAAgAAAB2ACsAAAAJAAgAAACFACoAAAAJAAgAAACGACoAAAAJAAgAAACIACsAAAAJAAgAAACUACgAAAAJAAgAAACRACQAAAALAAoAAACTACAAAAALAAoAAACsACsAAAALAAoAAACrACsAAAALAAoAAACqACgAAAALAAoAAACpACkAAAALAAoAAACnACsAAAALAAoAAACtAC4AAAALAAoAAACuAC8AAAALAAoAAACvAC8AAAALAAoAAAC0ACwAAAALAAoAAAC0ACsAAAALAAoAAACDACkAAAALAAoAAACDACoAAAALAAoAAAB+AC0AAAALAAoAAAB9AC0AAAALAAoAAAB8AC0AAAALAAoAAAB9AC4AAAALAAoAAAB+AC4AAAALAAoAAAB/AC4AAAALAAoAAACAAC8AAAALAAoAAACBAC8AAAALAAoAAACSAD4AAAAOAAgAAACoADkAAAAOAAgAAACfADgAAAAJAAgAAACkADQAAAAJAAgAAACeADEAAAAJAAgAAACdADEAAAAJAAgAAACWACwAAAAJAAgAAACDADIAAAAJAAgAAAB8ADYAAAAJAAgAAAB7ADYAAAAJAAgAAAB6ADYAAAAJAAgAAACIAEQAAAAJAAgAAAChACIAAAAEAAgAAACXADAAAAAEAAgAAACeADAAAAAEAAgAAAClADAAAAAEAAgAAACsADAAAAAEAAgAAACFADMAAAAIAAMAAAB+ADMAAAAAAAAAAAB7ADMAAAAIAAMAAACAADAAAAAEAAgAAACBAEIAAAAIAAMAAACGAD8AAAAEAAgAAACNAD8AAAAEAAgAAAB8AD8AAAAEAAgAAACYAEMAAAAQAAsAAACcAEMAAAAQAAsAAACgAEMAAAAQAAsAAACkAEMAAAAQAAsAAACoAEMAAAAQAAsAAACsAEMAAAAQAAsAAACkACQAAAAAAAsAAAB4ACQAAAAQAAsAAAB8ACQAAAAQAAsAAACAACQAAAAQAAsAAACEACQAAAAQAAsAAACIACQAAAAQAAsAAACFAJAAAAAAAAAAAACHAI0AAAAEAAgAAACMAI8AAAAIAAMAAACMAIQAAAAHAAAAAACdACQAAAAHAAAAAAA0AAwAAAAHAAAAAAA=")
 tile_set = ExtResource("10_hhr7y")
 
 [node name="Builldings" type="TileMapLayer" parent="TileMapLayers" unique_id=1068591039]
@@ -371,53 +422,6 @@ position = Vector2(572, 508)
 [node name="obstacle6" parent="Obstacles" unique_id=1686964474 instance=ExtResource("13_vsnx1")]
 position = Vector2(712, 511)
 
-[node name="Stuff" type="Node2D" parent="." unique_id=1219901960]
-position = Vector2(998, 464)
-
-[node name="Shadow" type="PointLight2D" parent="Stuff" unique_id=524101616]
-position = Vector2(1495, 999)
-color = Color(0.2003848, 0.21283503, 0.30621156, 1)
-blend_mode = 1
-shadow_enabled = true
-texture = ExtResource("7_epnnw")
-texture_scale = 2.0
-
-[node name="SignStart" parent="Stuff" unique_id=1579530966 instance=ExtResource("16_hbdua")]
-position = Vector2(-866, 1217)
-direction = 1
-text = "Recuerda que hay muchas
-formas de llegar a tu destino"
-
-[node name="Sign1" parent="Stuff" unique_id=834564288 instance=ExtResource("16_hbdua")]
-position = Vector2(-581, 1222)
-direction = 1
-text = "Hacia el centro de la ciudad"
-
-[node name="Sign2" parent="Stuff" unique_id=515520956 instance=ExtResource("16_hbdua")]
-position = Vector2(569, 146)
-direction = 1
-text = "Hacia el centro de la ciudad"
-
-[node name="Sign3" parent="Stuff" unique_id=801303948 instance=ExtResource("16_hbdua")]
-position = Vector2(782, 1446)
-direction = 1
-text = "Hacia el centro de la ciudad"
-
-[node name="Camera2D" type="Camera2D" parent="Stuff" unique_id=1196891219]
-process_mode = 3
-position = Vector2(-954, 1332)
-limit_left = 0
-limit_top = 0
-limit_right = 4403
-limit_bottom = 2803
-position_smoothing_enabled = true
-editor_draw_limits = true
-
-[node name="PointLight2D2" type="PointLight2D" parent="Stuff" unique_id=2098390639]
-position = Vector2(-950, 1305)
-color = Color(0.67349255, 0.6174666, 0.393363, 1)
-texture = ExtResource("7_epnnw")
-
 [node name="EnemyGuards" type="Node2D" parent="." unique_id=1997239040]
 z_index = 5
 y_sort_enabled = true
@@ -455,7 +459,7 @@ position = Vector2(12, 1)
 curve = SubResource("Curve2D_ckw1w")
 
 [node name="Guard6" parent="EnemyGuards" unique_id=1815850028 node_paths=PackedStringArray("patrol_path") instance=ExtResource("14_xvrmc")]
-position = Vector2(898, 202)
+position = Vector2(879, 184)
 patrol_path = NodePath("../Guard6 - Patrol Path")
 wait_time = 0.0
 move_speed = 450.0
