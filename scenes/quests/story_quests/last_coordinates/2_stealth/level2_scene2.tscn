@@ -261,6 +261,7 @@ dialogue = ExtResource("6_1kbn2")
 metadata/_custom_type_script = "uid://x1mxt6bmei2o"
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1620393872]
+visible = false
 color = Color(0.12955853, 0.12955844, 0.12955844, 1)
 
 [node name="Player" parent="." unique_id=1079296690 instance=ExtResource("3_hbdua")]
