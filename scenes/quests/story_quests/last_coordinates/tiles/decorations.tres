@@ -2,6 +2,15 @@
 
 [ext_resource type="Texture2D" uid="uid://0lw5a3ca78pf" path="res://scenes/quests/story_quests/last_coordinates/assets/newDecoration.png" id="1_gc6yv"]
 
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_gc6yv"]
+polygon = PackedVector2Array(-7, -118, 1, -126, 239, -126, 247, -118)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_sbr1m"]
+polygon = PackedVector2Array(-8, -131, 56, -131, 56, -120, -8, -120)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_0eja4"]
+polygon = PackedVector2Array(-3, -34, 1, -39, 31, -39, 35, -34)
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sbr1m"]
 texture = ExtResource("1_gc6yv")
 11:10/size_in_atlas = Vector2i(2, 1)
@@ -65,6 +74,7 @@ texture = ExtResource("1_gc6yv")
 4:8/0 = 0
 4:8/0/texture_origin = Vector2i(-16, 16)
 4:8/0/z_index = 2
+4:8/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_0eja4")
 7:9/size_in_atlas = Vector2i(4, 2)
 7:9/0 = 0
 12:8/size_in_atlas = Vector2i(2, 2)
@@ -85,13 +95,16 @@ texture = ExtResource("1_gc6yv")
 16:11/0 = 0
 16:11/0/texture_origin = Vector2i(-24, 64)
 16:11/0/z_index = 1
+16:11/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_sbr1m")
 16:11/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7.8064537, -130.95723, 56.238327, -130.95723, 55.60107, 7.965767, -8, 8)
 0:11/size_in_atlas = Vector2i(16, 9)
 0:11/0 = 0
 0:11/0/texture_origin = Vector2i(-120, 64)
+0:11/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_gc6yv")
 0:11/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7.903635, -126.45816, 248.05405, -126.17777, 247.09816, 7.965767, -8, 8)
 
 [resource]
+occlusion_layer_0/light_mask = 1
 physics_layer_0/collision_layer = 24
 physics_layer_0/collision_mask = 0
 sources/0 = SubResource("TileSetAtlasSource_sbr1m")
