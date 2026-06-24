@@ -8,9 +8,11 @@
 [ext_resource type="Texture2D" uid="uid://bjevnkfj35gch" path="res://scenes/quests/story_quests/last_coordinates/assets/floor/road.png" id="5_rqasq"]
 [ext_resource type="Resource" uid="uid://bmuk4jlibnmj0" path="res://scenes/quests/story_quests/last_coordinates/2_stealth/stealth_components/start2.dialogue" id="6_1kbn2"]
 [ext_resource type="Texture2D" uid="uid://ce864ov55arwi" path="res://scenes/quests/story_quests/last_coordinates/assets/floor/wooden_floor.png" id="6_mgv8s"]
+[ext_resource type="PackedScene" uid="uid://bpxgskxielp38" path="res://scenes/quests/story_quests/last_coordinates/player_components/lc_player.tscn" id="7_1kbn2"]
 [ext_resource type="Texture2D" uid="uid://dr716dyuhjv05" path="res://scenes/quests/story_quests/last_coordinates/assets/misc/spotlight.png" id="7_epnnw"]
-[ext_resource type="PackedScene" path="res://scenes/quests/story_quests/last_coordinates/player_components/last_coordinates_player.tscn" id="7_hhr7y"]
+[ext_resource type="Script" uid="uid://csev4hv57utxv" path="res://scenes/game_logic/walk_behaviors/character_speeds.gd" id="8_qtegg"]
 [ext_resource type="Texture2D" uid="uid://4ugpmvga32eo" path="res://scenes/quests/story_quests/last_coordinates/assets/minigame2_bricks.png" id="9_bff13"]
+[ext_resource type="SpriteFrames" uid="uid://6lrnci820w0p" path="res://scenes/quests/story_quests/last_coordinates/player_components/last_coordinates_player.tres" id="9_mgv8s"]
 [ext_resource type="TileSet" uid="uid://wmbjixcfjle5" path="res://scenes/quests/story_quests/last_coordinates/tiles/decorations.tres" id="10_hhr7y"]
 [ext_resource type="TileSet" uid="uid://c7ld0e2dg7htx" path="res://scenes/quests/story_quests/last_coordinates/assets/buildings/buildings.tres" id="11_s7i34"]
 [ext_resource type="PackedScene" uid="uid://c8dmgv3bp8kum" path="res://scenes/quests/story_quests/last_coordinates/assets/obstacles/obstacle_vertical.tscn" id="12_631kd"]
@@ -23,6 +25,9 @@
 [ext_resource type="Resource" uid="uid://xi1bj7lqdb84" path="res://scenes/quests/story_quests/last_coordinates/2_stealth/stealth_components/lc_checkpoint2.dialogue" id="18_s7i34"]
 [ext_resource type="Script" uid="uid://bgmwplmj3bfls" path="res://scenes/globals/game_state/inventory/inventory_item.gd" id="19_6olrc"]
 [ext_resource type="Resource" uid="uid://bpikrbutau6h4" path="res://scenes/quests/story_quests/last_coordinates/2_stealth/stealth_components/collected.dialogue" id="20_f6137"]
+
+[sub_resource type="Resource" id="Resource_lee21"]
+script = ExtResource("8_qtegg")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5lsdd"]
 resource_name = "Road Tiles"
@@ -262,21 +267,20 @@ metadata/_custom_type_script = "uid://x1mxt6bmei2o"
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1620393872]
 color = Color(0.12955853, 0.12955844, 0.12955844, 1)
 
-[node name="Player" parent="." unique_id=296354958 instance=ExtResource("7_hhr7y")]
+[node name="Player" parent="." unique_id=296354958 instance=ExtResource("7_1kbn2")]
 z_index = 5
-position = Vector2(68, 1803)
+position = Vector2(50, 1800)
+speeds = SubResource("Resource_lee21")
+sprite_frames = ExtResource("9_mgv8s")
 
-[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1196891219]
-process_mode = 3
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1099771514]
 limit_left = 0
 limit_top = 0
-limit_right = 4403
-limit_bottom = 2803
-position_smoothing_enabled = true
-editor_draw_limits = true
+limit_right = 4398
+limit_bottom = 2806
 
-[node name="PointLight2D2" type="PointLight2D" parent="Player" unique_id=2098390639]
-color = Color(0.67349255, 0.6174666, 0.393363, 1)
+[node name="PointLight2D2" type="PointLight2D" parent="Player" unique_id=2065840474]
+color = Color(0.40446794, 0.36953074, 0.22628817, 1)
 texture = ExtResource("7_epnnw")
 offset = Vector2(3, -30)
 
