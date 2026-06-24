@@ -18,7 +18,7 @@ grow_vertical = 2
 script = ExtResource("1_004mb")
 camera = NodePath("Camera")
 background = NodePath("MovableBackground")
-duration = 45.0
+duration = 25.0
 
 [node name="bgm" type="AudioStreamPlayer" parent="." unique_id=2037235784]
 stream = ExtResource("7_v88xo")

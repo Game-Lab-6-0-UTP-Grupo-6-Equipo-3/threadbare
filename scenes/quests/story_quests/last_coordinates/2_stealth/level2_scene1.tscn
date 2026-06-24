@@ -337,7 +337,7 @@ text = "Hacia el centro de la ciudad"
 
 [node name="Player" parent="." unique_id=296354958 instance=ExtResource("8_yuvam")]
 z_index = 5
-position = Vector2(56, 2546)
+position = Vector2(62, 2546)
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=1196891219]
 process_mode = 3
