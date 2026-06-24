@@ -9,7 +9,6 @@
 [ext_resource type="Texture2D" uid="uid://ce864ov55arwi" path="res://scenes/quests/story_quests/last_coordinates/assets/floor/wooden_floor.png" id="6_hl57d"]
 [ext_resource type="PackedScene" uid="uid://covsdqqsd6rsy" path="res://scenes/game_elements/props/sign/sign.tscn" id="7_0g42c"]
 [ext_resource type="Texture2D" uid="uid://dr716dyuhjv05" path="res://scenes/quests/story_quests/last_coordinates/assets/misc/spotlight.png" id="7_yuvam"]
-[ext_resource type="PackedScene" path="res://scenes/quests/story_quests/last_coordinates/player_components/last_coordinates_player.tscn" id="8_yuvam"]
 [ext_resource type="Texture2D" uid="uid://0lw5a3ca78pf" path="res://scenes/quests/story_quests/last_coordinates/assets/newDecoration.png" id="11_0g42c"]
 [ext_resource type="PackedScene" uid="uid://cfcgrfvtn04yp" path="res://scenes/ui_elements/hud/hud.tscn" id="11_8fgse"]
 [ext_resource type="PackedScene" uid="uid://c8dmgv3bp8kum" path="res://scenes/quests/story_quests/last_coordinates/assets/obstacles/obstacle_vertical.tscn" id="12_hl57d"]
@@ -335,12 +334,9 @@ position = Vector2(863, 2680)
 direction = 1
 text = "Hacia el centro de la ciudad"
 
-[node name="Player" parent="." unique_id=296354958 instance=ExtResource("8_yuvam")]
-z_index = 5
-position = Vector2(62, 2546)
-
-[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1196891219]
+[node name="Camera2D" type="Camera2D" parent="Stuff" unique_id=1196891219]
 process_mode = 3
+position = Vector2(62, 2546)
 limit_left = 0
 limit_top = 646
 limit_right = 3134
@@ -348,7 +344,8 @@ limit_bottom = 2971
 position_smoothing_enabled = true
 editor_draw_limits = true
 
-[node name="PointLight2D2" type="PointLight2D" parent="Player" unique_id=1753834904]
+[node name="PointLight2D2" type="PointLight2D" parent="Stuff" unique_id=1753834904]
+position = Vector2(62, 2546)
 color = Color(0.40446794, 0.36953074, 0.22628817, 1)
 texture = ExtResource("7_yuvam")
 offset = Vector2(3, -30)
