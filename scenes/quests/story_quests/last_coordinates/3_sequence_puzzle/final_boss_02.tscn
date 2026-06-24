@@ -125,8 +125,9 @@ tile_set = ExtResource("10_71pee")
 y_sort_enabled = true
 
 [node name="Player" parent="Underground" unique_id=296354958 instance=ExtResource("9_fef25")]
+z_index = 5
 y_sort_enabled = true
-position = Vector2(137, 469)
+position = Vector2(235, 489)
 sprite_frames = ExtResource("10_h2wks")
 
 [node name="Camera2D" type="Camera2D" parent="Underground/Player" unique_id=1690936989]
@@ -147,21 +148,25 @@ walking_time = 1.3
 walking_range = 305.0
 
 [node name="FillingBarrel" parent="Underground" unique_id=1861594411 instance=ExtResource("13_2470v")]
+z_index = 5
 position = Vector2(-287, 26)
 sprite_frames = ExtResource("14_usykc")
 label = "shield"
 
 [node name="FillingBarrel2" parent="Underground" unique_id=724191906 instance=ExtResource("13_2470v")]
+z_index = 5
 position = Vector2(738, 28)
 sprite_frames = ExtResource("14_usykc")
 label = "shield"
 
 [node name="FillingBarrel3" parent="Underground" unique_id=24532142 instance=ExtResource("13_2470v")]
+z_index = 5
 position = Vector2(737, 550)
 sprite_frames = ExtResource("14_usykc")
 label = "shield"
 
 [node name="FillingBarrel4" parent="Underground" unique_id=1228980459 instance=ExtResource("13_2470v")]
+z_index = 5
 position = Vector2(-292, 552)
 sprite_frames = ExtResource("14_usykc")
 label = "shield"
