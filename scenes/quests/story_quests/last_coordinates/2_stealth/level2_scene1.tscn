@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bjevnkfj35gch" path="res://scenes/quests/story_quests/last_coordinates/assets/floor/road.png" id="5_be2d8"]
 [ext_resource type="Texture2D" uid="uid://ce864ov55arwi" path="res://scenes/quests/story_quests/last_coordinates/assets/floor/wooden_floor.png" id="6_hl57d"]
 [ext_resource type="PackedScene" uid="uid://covsdqqsd6rsy" path="res://scenes/game_elements/props/sign/sign.tscn" id="7_0g42c"]
+[ext_resource type="PackedScene" path="res://scenes/quests/story_quests/last_coordinates/player_components/last_coordinates_player.tscn" id="7_vl4u6"]
 [ext_resource type="Texture2D" uid="uid://dr716dyuhjv05" path="res://scenes/quests/story_quests/last_coordinates/assets/misc/spotlight.png" id="7_yuvam"]
 [ext_resource type="Texture2D" uid="uid://0lw5a3ca78pf" path="res://scenes/quests/story_quests/last_coordinates/assets/newDecoration.png" id="11_0g42c"]
 [ext_resource type="PackedScene" uid="uid://cfcgrfvtn04yp" path="res://scenes/ui_elements/hud/hud.tscn" id="11_8fgse"]
@@ -311,6 +312,26 @@ metadata/_custom_type_script = "uid://x1mxt6bmei2o"
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=508226475]
 color = Color(0.21230483, 0.21230483, 0.21230483, 1)
 
+[node name="Player" parent="." unique_id=296354958 instance=ExtResource("7_vl4u6")]
+z_index = 5
+position = Vector2(54, 2564)
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1196891219]
+process_mode = 3
+zoom = Vector2(1.1, 1.1)
+limit_left = 0
+limit_top = 646
+limit_right = 3134
+limit_bottom = 2971
+position_smoothing_enabled = true
+editor_draw_limits = true
+
+[node name="PointLight2D2" type="PointLight2D" parent="Player" unique_id=1753834904]
+color = Color(0.40446794, 0.36953074, 0.22628817, 1)
+texture = ExtResource("7_yuvam")
+offset = Vector2(3, -30)
+texture_scale = 0.7
+
 [node name="Stuff" type="Node2D" parent="." unique_id=1903888410]
 
 [node name="SignStart" parent="Stuff" unique_id=1579530966 instance=ExtResource("7_0g42c")]
@@ -333,23 +354,6 @@ text = "Hacia el centro de la ciudad"
 position = Vector2(863, 2680)
 direction = 1
 text = "Hacia el centro de la ciudad"
-
-[node name="Camera2D" type="Camera2D" parent="Stuff" unique_id=1196891219]
-process_mode = 3
-position = Vector2(62, 2546)
-limit_left = 0
-limit_top = 646
-limit_right = 3134
-limit_bottom = 2971
-position_smoothing_enabled = true
-editor_draw_limits = true
-
-[node name="PointLight2D2" type="PointLight2D" parent="Stuff" unique_id=1753834904]
-position = Vector2(62, 2546)
-color = Color(0.40446794, 0.36953074, 0.22628817, 1)
-texture = ExtResource("7_yuvam")
-offset = Vector2(3, -30)
-texture_scale = 0.7
 
 [node name="TileMapLayers" type="Node2D" parent="." unique_id=1475451359]
 y_sort_enabled = true
