@@ -12,7 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://b5xqi4o5rwbae" path="res://scenes/quests/story_quests/last_coordinates/game_elements/Boton4.tscn" id="9_dhfv4"]
 [ext_resource type="Texture2D" uid="uid://blhb6vqd66ejl" path="res://scenes/quests/story_quests/last_coordinates/assets/industry_Tiles.png" id="9_xd5wu"]
 [ext_resource type="PackedScene" uid="uid://djnq3850tu0wu" path="res://scenes/quests/story_quests/last_coordinates/game_elements/Boton5.tscn" id="10_doct3"]
-[ext_resource type="PackedScene" path="res://scenes/quests/story_quests/last_coordinates/player_components/player.tscn" id="11_ddy81"]
+[ext_resource type="PackedScene" uid="uid://bpxgskxielp38" path="res://scenes/quests/story_quests/last_coordinates/player_components/lc_player.tscn" id="11_ddy81"]
 [ext_resource type="Script" uid="uid://csev4hv57utxv" path="res://scenes/game_logic/walk_behaviors/character_speeds.gd" id="12_tcrn3"]
 [ext_resource type="TileSet" uid="uid://byot6grk1xg53" path="res://scenes/quests/story_quests/last_coordinates/tiles/industryDecoration.tres" id="12_u624a"]
 [ext_resource type="SpriteFrames" uid="uid://6lrnci820w0p" path="res://scenes/quests/story_quests/last_coordinates/player_components/last_coordinates_player.tres" id="14_qceoe"]

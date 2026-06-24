@@ -8,8 +8,10 @@
 [ext_resource type="Texture2D" uid="uid://bjevnkfj35gch" path="res://scenes/quests/story_quests/last_coordinates/assets/floor/road.png" id="5_be2d8"]
 [ext_resource type="Texture2D" uid="uid://ce864ov55arwi" path="res://scenes/quests/story_quests/last_coordinates/assets/floor/wooden_floor.png" id="6_hl57d"]
 [ext_resource type="PackedScene" uid="uid://covsdqqsd6rsy" path="res://scenes/game_elements/props/sign/sign.tscn" id="7_0g42c"]
-[ext_resource type="PackedScene" path="res://scenes/quests/story_quests/last_coordinates/player_components/last_coordinates_player.tscn" id="7_vl4u6"]
+[ext_resource type="PackedScene" uid="uid://bpxgskxielp38" path="res://scenes/quests/story_quests/last_coordinates/player_components/lc_player.tscn" id="7_vl4u6"]
 [ext_resource type="Texture2D" uid="uid://dr716dyuhjv05" path="res://scenes/quests/story_quests/last_coordinates/assets/misc/spotlight.png" id="7_yuvam"]
+[ext_resource type="Script" uid="uid://csev4hv57utxv" path="res://scenes/game_logic/walk_behaviors/character_speeds.gd" id="8_81f3x"]
+[ext_resource type="SpriteFrames" uid="uid://6lrnci820w0p" path="res://scenes/quests/story_quests/last_coordinates/player_components/last_coordinates_player.tres" id="9_f1clf"]
 [ext_resource type="Texture2D" uid="uid://0lw5a3ca78pf" path="res://scenes/quests/story_quests/last_coordinates/assets/newDecoration.png" id="11_0g42c"]
 [ext_resource type="PackedScene" uid="uid://cfcgrfvtn04yp" path="res://scenes/ui_elements/hud/hud.tscn" id="11_8fgse"]
 [ext_resource type="PackedScene" uid="uid://c8dmgv3bp8kum" path="res://scenes/quests/story_quests/last_coordinates/assets/obstacles/obstacle_vertical.tscn" id="12_hl57d"]
@@ -21,6 +23,9 @@
 [ext_resource type="Resource" uid="uid://dafewhmikjlc4" path="res://scenes/quests/story_quests/last_coordinates/2_stealth/stealth_components/lc_checkpoint1.dialogue" id="16_0g42c"]
 [ext_resource type="Resource" uid="uid://bijrun6i7dk12" path="res://scenes/quests/story_quests/last_coordinates/2_stealth/stealth_components/start1.dialogue" id="16_r1qp8"]
 [ext_resource type="Script" uid="uid://hqdquinbimce" path="res://scenes/game_elements/props/teleporter/teleporter.gd" id="20_piun6"]
+
+[sub_resource type="Resource" id="Resource_3pegj"]
+script = ExtResource("8_81f3x")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5lsdd"]
 resource_name = "Road Tiles"
@@ -312,21 +317,20 @@ metadata/_custom_type_script = "uid://x1mxt6bmei2o"
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=508226475]
 color = Color(0.21230483, 0.21230483, 0.21230483, 1)
 
-[node name="Player" parent="." unique_id=296354958 instance=ExtResource("7_vl4u6")]
+[node name="Player2" parent="." unique_id=296354958 instance=ExtResource("7_vl4u6")]
 z_index = 5
-position = Vector2(54, 2564)
+position = Vector2(40, 2552)
+speeds = SubResource("Resource_3pegj")
+sprite_frames = ExtResource("9_f1clf")
 
-[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1196891219]
-process_mode = 3
-zoom = Vector2(1.1, 1.1)
+[node name="Camera2D" type="Camera2D" parent="Player2" unique_id=208798171]
+position = Vector2(64, 1)
 limit_left = 0
-limit_top = 646
-limit_right = 3134
-limit_bottom = 2971
-position_smoothing_enabled = true
-editor_draw_limits = true
+limit_top = 660
+limit_right = 3191
+limit_bottom = 3000
 
-[node name="PointLight2D2" type="PointLight2D" parent="Player" unique_id=1753834904]
+[node name="PointLight2D2" type="PointLight2D" parent="Player2" unique_id=1753834904]
 color = Color(0.40446794, 0.36953074, 0.22628817, 1)
 texture = ExtResource("7_yuvam")
 offset = Vector2(3, -30)
@@ -335,7 +339,7 @@ texture_scale = 0.7
 [node name="Stuff" type="Node2D" parent="." unique_id=1903888410]
 
 [node name="SignStart" parent="Stuff" unique_id=1579530966 instance=ExtResource("7_0g42c")]
-position = Vector2(326, 2456)
+position = Vector2(326, 2441)
 direction = 1
 text = "Recuerda que hay muchas
 formas de llegar a tu destino"
